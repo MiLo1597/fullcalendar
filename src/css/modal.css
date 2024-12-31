@@ -1,0 +1,78 @@
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1050; /* Ensure modal is above other content */
+    pointer-events: none; /* Ensure the backdrop doesn't block clicks */
+}
+
+/* Modal dialog box */
+.modal-dialog {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 400px;
+    max-width: 90%;
+    z-index: 1060; /* Ensure it's above the backdrop */
+    position: relative;
+    pointer-events: auto; /* Ensure the modal content is clickable */
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    pointer-events: none; /* Make backdrop non-interactive */
+}
+
+/* Modal header styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button in modal header */
+.modal-close {
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+
+/* Modal footer buttons */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+/* Cancel and confirm buttons */
+.modal-delete, .modal-confirm {
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-delete {
+    background: #f44336;
+}
+
+.modal-confirm:hover, .modal-delete:hover {
+    opacity: 0.8;
+}
